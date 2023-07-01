@@ -5,7 +5,7 @@
   bottom: 10vh;
   /* Medium devices (landscape tablets, 768px and DOWN) */
   @media only screen and (max-width: 768px) {
-    bottom: 5vh;
+    bottom: 2vh;
   }
 
   z-index: 9999;
@@ -54,7 +54,7 @@
   bottom: 10vh;
   /* Medium devices (landscape tablets, 768px and DOWN) */
   @media only screen and (max-width: 768px) {
-    bottom: 5vh;
+    bottom: 2vh;
   }
   z-index: 9999;
   padding: 0.75rem 3.75rem 2.5rem 3.75rem;
