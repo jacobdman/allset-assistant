@@ -37,7 +37,8 @@ const PopupOption = ({ close, optionTitle, optionText, actionText }) => {
             .typeString(`<p>${optionText}</p>`)
             .pauseFor(500)
             .typeString(`<h3>${actionText}</h3>`)
-            .callFunction(() => setResponseGenerationCompleted(true));
+            .callFunction(() => setResponseGenerationCompleted(true))
+            .start();
         }}
       />
       <div className="actionButtons">

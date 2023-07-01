@@ -3,10 +3,16 @@
   right: -300px; /* start off screen */
   animation: slideIn 0.5s forwards; /* use the slideIn animation */
   bottom: 10vh;
+  /* Medium devices (landscape tablets, 768px and DOWN) */
+  @media only screen and (max-width: 768px) {
+    bottom: 5vh;
+  }
+
   z-index: 9999;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
   border-radius: 0.60075rem 0rem 0rem 0.60075rem;
   background: rgba(255, 255, 249, 0.95);
@@ -46,6 +52,10 @@
   position: fixed;
   right: -300px; /* start off screen */
   bottom: 10vh;
+  /* Medium devices (landscape tablets, 768px and DOWN) */
+  @media only screen and (max-width: 768px) {
+    bottom: 5vh;
+  }
   z-index: 9999;
   padding: 0.75rem 3.75rem 2.5rem 3.75rem;
   display: flex;
