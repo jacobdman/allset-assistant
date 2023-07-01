@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/allset-assistant/static/css/main.1d6cc523.css",
+    "main.js": "/allset-assistant/static/js/main.20844737.js",
+    "static/js/787.760911f0.chunk.js": "/allset-assistant/static/js/787.760911f0.chunk.js",
+    "static/media/holding-phone.jpg": "/allset-assistant/static/media/holding-phone.a2c7d22846662ab931a8.jpg",
+    "static/media/person-1.jfif": "/allset-assistant/static/media/person-1.bbea6ac7c4645e7ad06b.jfif",
+    "static/media/person-2.jfif": "/allset-assistant/static/media/person-2.631d80a29452f1563e18.jfif",
+    "static/media/person-3.jpg": "/allset-assistant/static/media/person-3.26c9ebdb053663e19952.jpg",
+    "static/media/illustration.svg": "/allset-assistant/static/media/illustration.5165fe59ccde71965562da8f9645cb68.svg",
+    "static/media/dots.svg": "/allset-assistant/static/media/dots.ebebc2f6ebb2289016ea.svg",
+    "index.html": "/allset-assistant/index.html",
+    "static/media/bullet.svg": "/allset-assistant/static/media/bullet.f75dbb744b0045134fda.svg",
+    "static/media/video.svg": "/allset-assistant/static/media/video.db5c14278bbc8e1b063627f5caa5f965.svg",
+    "static/media/close.svg": "/allset-assistant/static/media/close.604f17ae9e7f7ab96de76a3408313180.svg",
+    "static/media/menu.svg": "/allset-assistant/static/media/menu.9dbc5a3a96ad85a57422263699b1695d.svg",
+    "main.1d6cc523.css.map": "/allset-assistant/static/css/main.1d6cc523.css.map",
+    "main.20844737.js.map": "/allset-assistant/static/js/main.20844737.js.map",
+    "787.760911f0.chunk.js.map": "/allset-assistant/static/js/787.760911f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d6cc523.css",
+    "static/js/main.20844737.js"
+  ]
+}
