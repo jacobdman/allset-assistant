@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/allset-assistant/static/css/main.1d6cc523.css",
-    "main.js": "/allset-assistant/static/js/main.20844737.js",
+    "main.js": "/allset-assistant/static/js/main.6e1e4f11.js",
     "static/js/787.760911f0.chunk.js": "/allset-assistant/static/js/787.760911f0.chunk.js",
     "static/media/holding-phone.jpg": "/allset-assistant/static/media/holding-phone.a2c7d22846662ab931a8.jpg",
     "static/media/person-1.jfif": "/allset-assistant/static/media/person-1.bbea6ac7c4645e7ad06b.jfif",
@@ -15,11 +15,11 @@
     "static/media/close.svg": "/allset-assistant/static/media/close.604f17ae9e7f7ab96de76a3408313180.svg",
     "static/media/menu.svg": "/allset-assistant/static/media/menu.9dbc5a3a96ad85a57422263699b1695d.svg",
     "main.1d6cc523.css.map": "/allset-assistant/static/css/main.1d6cc523.css.map",
-    "main.20844737.js.map": "/allset-assistant/static/js/main.20844737.js.map",
+    "main.6e1e4f11.js.map": "/allset-assistant/static/js/main.6e1e4f11.js.map",
     "787.760911f0.chunk.js.map": "/allset-assistant/static/js/787.760911f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d6cc523.css",
-    "static/js/main.20844737.js"
+    "static/js/main.6e1e4f11.js"
   ]
 }
