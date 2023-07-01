@@ -80,6 +80,7 @@
   border: 1px solid #bfccda;
   background: rgba(235, 244, 253, 0.95);
   box-shadow: 0px 12.015332221984863px 10px 0px rgba(29, 22, 22, 0.04);
+  cursor: pointer;
 }
 
 .optionHelp {
@@ -115,7 +116,7 @@
 .actionButtons {
   width: 100%;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .actionButtons button {
@@ -125,6 +126,10 @@
   justify-content: center;
   height: 5.2rem;
   width: 8rem;
+}
+
+.actionButtons button:hover {
+  cursor: pointer;
 }
 
 .popupMain {
@@ -168,4 +173,9 @@
   box-shadow: 5px 5px 5px lightgray;
 
   text-align: center;
+}
+
+.progress {
+  width: 100%;
+  margin: 1rem 0rem 1rem 0rem;
 }
