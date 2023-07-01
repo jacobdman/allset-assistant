@@ -34,23 +34,7 @@ const Allset = () => {
       >
         <div className="titleContainer">
           <WavingHandIcon className="mirror" />
-          <p className="title">
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true,
-              }}
-              onInit={typewriter => {
-                typewriter
-                  .typeString("Hi! Can We Help?")
-                  .pauseFor(7000)
-                  .deleteAll()
-                  .typeString("Have Any Questions?")
-                  .pauseFor(7000)
-                  .start();
-              }}
-            />
-          </p>
+          <p className="title">Hi! Can We Help?</p>
         </div>
         <p className="subtitle">
           powered by <span className="bold">allset.</span>
