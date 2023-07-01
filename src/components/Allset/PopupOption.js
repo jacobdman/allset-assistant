@@ -7,7 +7,6 @@ import Grow from "@mui/material/Grow";
 import LinearProgress from "@mui/material/LinearProgress";
 
 const PopupOption = ({ close, optionTitle, optionText, actionText }) => {
-    // const [showCursor, setShowCursor] = useState(true);
     const [loadingResponse, setLoadingResponse] = useState(true);
   const [responseGenerationCompleted, setResponseGenerationCompleted] =
     useState(false);
@@ -38,9 +37,7 @@ const PopupOption = ({ close, optionTitle, optionText, actionText }) => {
             .typeString(`<p>${optionText}</p>`)
             .pauseFor(500)
             .typeString(`<h3>${actionText}</h3>`)
-            .callFunction(() => setResponseGenerationCompleted(true))
-            // .callFunction(() => setShowCursor(false))
-            .start();
+            .callFunction(() => setResponseGenerationCompleted(true));
         }}
       />
       <div className="actionButtons">

@@ -19,36 +19,43 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
     <div ref={ref} className="popupContainer">
       <div onClick={close}>Close</div>
       <Collapse in={selectedHelpOption === "main"} className="popupMain">
-          <h4>What can I help with?</h4>
-          <button onClick={() => setSelectedHelpOption("availability")}>
-            <CalendarMonthIcon />
-            Availability
-          </button>
-          <button onClick={() => setSelectedHelpOption("appointment")}>
-            <ContentPasteIcon />
-            Make an appointment
-          </button>
-          <button onClick={() => setSelectedHelpOption("info")}>
-            <QuestionAnswerIcon />
-            Text me with information
-          </button>
-          <button onClick={() => setSelectedHelpOption("quote")}>
-            <ArticleIcon />
-            Get an instant quote
-          </button>
-          <button onClick={() => setSelectedHelpOption("contact-agent")}>
-            <SupportAgentIcon />
-            Contact an Agent
-          </button>
+        <h4>What can I help with?</h4>
+        <button onClick={() => setSelectedHelpOption("availability")}>
+          <CalendarMonthIcon />
+          Availability
+        </button>
+        <button onClick={() => setSelectedHelpOption("appointment")}>
+          <ContentPasteIcon />
+          Make an appointment
+        </button>
+        <button onClick={() => setSelectedHelpOption("info")}>
+          <QuestionAnswerIcon />
+          Text me with information
+        </button>
+        <button onClick={() => setSelectedHelpOption("quote")}>
+          <ArticleIcon />
+          Get an instant quote
+        </button>
+        <button onClick={() => setSelectedHelpOption("contact-agent")}>
+          <SupportAgentIcon />
+          Contact an Agent
+        </button>
       </Collapse>
       <Collapse in={selectedHelpOption === "availability"}>
-      <div className="popupMain">
-        <PopupOption close={handleCloseOption} optionTitle="Availability" optionText="Looks like our next available spot is the next Monday at 8:00 a.m." actionText="Would you like to book a cleaning service?"/>
-      </div>
+        {selectedHelpOption === "availability" && (
+          <div className="popupMain">
+            <PopupOption
+              close={handleCloseOption}
+              optionTitle="Availability"
+              optionText="Looks like our next available spot is the next Monday at 8:00 a.m."
+              actionText="Would you like to book a cleaning service?"
+            />
+          </div>
+        )}
       </Collapse>
-          <span>
-            powered by <strong>allset</strong>
-          </span>
+      <span>
+        powered by <strong>allset</strong>
+      </span>
     </div>
   );
 });
