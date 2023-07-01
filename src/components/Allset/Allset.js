@@ -5,16 +5,13 @@ import WavingHandIcon from "@mui/icons-material/WavingHandOutlined";
 import Typewriter from "typewriter-effect";
 
 const Allset = () => {
-  const titleText1 = "Hi! Can We Help?";
-  const titleText2 = "Have Any Questions?";
-  const [titleText, setTitleText] = useState(titleText1);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const promptRef = useRef(null);
   const popupRef = useRef(null);
 
   const handleOpenPopup = async () => {
     promptRef.current.className = "buttonContainer slideOut";
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 200));
     setIsPopupOpen(true);
     popupRef.current.className = "popupContainer";
     promptRef.current.style.display = "none";
