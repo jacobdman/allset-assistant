@@ -1,0 +1,46 @@
+.mirror {
+  transform: scaleX(-1);
+}
+
+.popupContainer {
+  position: fixed;
+  right: -300px; /* start off screen */
+  bottom: 10vh;
+  /* Medium devices (landscape tablets, 768px and DOWN) */
+  @media only screen and (max-width: 768px) {
+    bottom: 2vh;
+  }
+
+  z-index: 9999;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  border-radius: 0.60075rem 0rem 0rem 0.60075rem;
+  background: rgba(255, 255, 249, 0.95);
+  box-shadow: -4px 5px 0px 0px #434343;
+
+  animation: slideIn 0.5s forwards; /* use the slideIn animation */
+}
+
+.popupContainer:hover {
+  cursor: pointer;
+}
+
+.popupTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popupTitle {
+  text-align: center;
+  margin: 0px 0px 0px 10px;
+}
+
+.popupSubtitle {
+  font-size: 0.8rem;
+  margin: 0px;
+  align-self: flex-end;
+}

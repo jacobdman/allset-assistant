@@ -1,0 +1,87 @@
+.assistantContainer {
+  position: fixed;
+  right: -300px; /* start off screen */
+  bottom: 10vh;
+  /* Medium devices (landscape tablets, 768px and DOWN) */
+  @media only screen and (max-width: 768px) {
+    bottom: 2vh;
+  }
+
+  z-index: 9999;
+  padding: 0.75rem 3.75rem 2.5rem 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 25rem;
+  box-sizing: border-box;
+  border-radius: 1.92238rem 0rem 0rem 1.92238rem;
+  background: rgba(255, 255, 249, 0.95);
+  box-shadow: -4px 5px 0px 0px #434343;
+
+  animation: slideIn 0.5s forwards; /* use the slideIn animation */
+}
+
+.titleText {
+  font-size: 1.5rem;
+}
+
+.botButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.75rem;
+
+  height: 5.2rem;
+  width: 100%;
+
+  border-radius: 10px;
+  border: 1px solid #cacac8;
+  background: linear-gradient(
+    136deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 254, 254, 0.5) 100%
+  );
+  box-shadow: 10.252809524536133px 12.30337142944336px 20.505619049072266px 0px
+    rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7.176966667175293px);
+}
+
+.botButton:hover {
+  background: linear-gradient(
+    136deg,
+    rgba(235, 244, 253, 0.9) 0%,
+    rgba(212, 232, 250, 0.6) 100%
+  );
+  cursor: pointer;
+}
+
+.botButton:active {
+  background: linear-gradient(
+    136deg,
+    rgba(237, 237, 235, 0.9) 0%,
+    rgba(222, 222, 222, 0.5) 100%
+  );
+}
+
+.botButton:focus {
+  background: linear-gradient(
+    136deg,
+    rgba(34, 33, 31, 0.9) 0%,
+    rgba(4, 4, 3, 0.8) 100%
+  );
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.assistantContainer.slideOut {
+  animation: slideOut 0.5s forwards;
+}

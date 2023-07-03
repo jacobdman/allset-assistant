@@ -1,163 +1,21 @@
-.buttonContainer {
-  position: fixed;
-  right: -300px; /* start off screen */
-  animation: slideIn 0.5s forwards; /* use the slideIn animation */
-  bottom: 10vh;
-  /* Medium devices (landscape tablets, 768px and DOWN) */
-  @media only screen and (max-width: 768px) {
-    bottom: 2vh;
-  }
+@import url('https://fonts.googleapis.com/css?family=Inter');
 
-  z-index: 9999;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-
-  border-radius: 0.60075rem 0rem 0rem 0.60075rem;
-  background: rgba(255, 255, 249, 0.95);
-  box-shadow: -4px 5px 0px 0px #434343;
-}
-
-.buttonContainer:hover {
-  cursor: pointer;
-}
-
-.mirror {
-  transform: scaleX(-1);
-}
-
-.titleContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title {
-  text-align: center;
-  margin: 0px 0px 0px 10px;
-}
-
-.subtitle {
-  font-size: 0.8rem;
-  margin: 0px;
-  align-self: flex-end;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.popupContainer {
-  position: fixed;
-  right: -300px; /* start off screen */
-  bottom: 10vh;
-  /* Medium devices (landscape tablets, 768px and DOWN) */
-  @media only screen and (max-width: 768px) {
-    bottom: 2vh;
-  }
-  z-index: 9999;
-  padding: 0.75rem 3.75rem 2.5rem 3.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  animation: slideIn 0.5s forwards; /* use the slideIn animation */
-  width: 25rem;
-  box-sizing: border-box;
-  border-radius: 1.92238rem 0rem 0rem 1.92238rem;
-  background: rgba(255, 255, 249, 0.95);
-  box-shadow: -4px 5px 0px 0px #434343;
-}
-
-.popupContainer button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.7rem;
-  height: 5.2rem;
-  width: 100%;
-  border-radius: 0.625rem;
-  border: 1px solid #cacac8;
-  background: rgba(252, 252, 250, 0.95);
-  box-shadow: 0px 12.015332221984863px 10px 0px rgba(29, 22, 22, 0.04);
-}
-
-.popupContainer button:hover {
-  background: rgba(252, 252, 250, 0.95);
-  border-radius: 0.625rem;
-  border: 1px solid #bfccda;
-  background: rgba(235, 244, 253, 0.95);
-  box-shadow: 0px 12.015332221984863px 10px 0px rgba(29, 22, 22, 0.04);
-  cursor: pointer;
-}
-
-.optionHelp {
-  font-weight: lighter;
-}
-
-.optionTileContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.optionTitle {
-  background: #393836;
-  color: #fafafa;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-
-  border-radius: 3.4375rem;
-  border: 1.23px solid #e2ff00;
-  background: rgba(47, 46, 44, 0.95);
-  box-shadow: 10.252809524536133px 12.30337142944336px 20.505619049072266px 0px
-    rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(7.176966667175293px);
-}
-
-.optionContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.actionButtons {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.actionButtons button {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 5.2rem;
-  width: 8rem;
-}
-
-.actionButtons button:hover {
-  cursor: pointer;
-}
-
-.popupMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  text-align: center;
+.allset-root * {
+  font-family: 'Inter';
+  color: #323232;
 }
 
 .slideOut {
   animation: slideOut 0.5s forwards; /* use the slideOut animation */
 }
 
+.slideIn {
+  animation: slideIn 0.5s forwards; /* use the slideIn animation */
+}
+
 @keyframes slideIn {
   from {
-    right: -25rem; /* start off screen */
+    right: -30rem; /* start off screen */
   }
   to {
     right: 0; /* slide in to the right */
@@ -169,23 +27,6 @@
     right: 0; /* start on screen */
   }
   to {
-    right: -25rem; /* slide off to the right */
+    right: -30rem; /* slide off to the right */
   }
-}
-
-.popupContainer.slideOut {
-  animation: slideOut 0.5s forwards;
-}
-
-.popup-box {
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  box-shadow: 5px 5px 5px lightgray;
-
-  text-align: center;
-}
-
-.progress {
-  width: 100%;
-  margin: 1rem 0rem 1rem 0rem;
 }

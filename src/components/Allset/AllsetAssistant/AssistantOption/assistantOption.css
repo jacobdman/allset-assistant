@@ -1,0 +1,41 @@
+.optionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.optionTitle {
+  font-weight: lighter;
+}
+
+.optionChip {
+  background: #393836;
+  color: #fafafa;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+
+  border-radius: 3.4375rem;
+  border: 1.23px solid #e2ff00;
+  background: rgba(47, 46, 44, 0.95);
+  box-shadow: 10.252809524536133px 12.30337142944336px 20.505619049072266px 0px
+    rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7.176966667175293px);
+}
+
+.progress {
+  width: 100%;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.actionButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spacer {
+  width: 1.75rem;
+}

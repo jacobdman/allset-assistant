@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./allset.css";
+import "./allsetAssistant.css";
 import Collapse from "@mui/material/Collapse";
-import PopupOption from "./PopupOption";
+import AssistantOption from "./AssistantOption";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonthOutlined";
 import ContentPasteIcon from "@mui/icons-material/ContentPasteOutlined";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswerOutlined";
@@ -16,41 +16,54 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
   };
 
   return (
-    <div ref={ref} className="popupContainer">
+    <div ref={ref} className="assistantContainer">
       <div onClick={close}>Close</div>
-      <Collapse in={selectedHelpOption === "main"} className="popupMain">
-        <h4>What can I help with?</h4>
-        <button onClick={() => setSelectedHelpOption("availability")}>
+      <Collapse in={selectedHelpOption === "main"} className="mainContainer">
+        <p className="titleText">What can I help with?</p>
+        <div
+          className="botButton"
+          onClick={() => setSelectedHelpOption("availability")}
+        >
           <CalendarMonthIcon />
           Availability
-        </button>
-        <button onClick={() => setSelectedHelpOption("appointment")}>
+        </div>
+        <div
+          className="botButton"
+          onClick={() => setSelectedHelpOption("appointment")}
+        >
           <ContentPasteIcon />
           Make an appointment
-        </button>
-        <button onClick={() => setSelectedHelpOption("info")}>
+        </div>
+        <div
+          className="botButton"
+          onClick={() => setSelectedHelpOption("info")}
+        >
           <QuestionAnswerIcon />
           Text me with information
-        </button>
-        <button onClick={() => setSelectedHelpOption("quote")}>
+        </div>
+        <div
+          className="botButton"
+          onClick={() => setSelectedHelpOption("quote")}
+        >
           <ArticleIcon />
           Get an instant quote
-        </button>
-        <button onClick={() => setSelectedHelpOption("contact-agent")}>
+        </div>
+        <div
+          className="botButton"
+          onClick={() => setSelectedHelpOption("contact-agent")}
+        >
           <SupportAgentIcon />
           Contact an Agent
-        </button>
+        </div>
       </Collapse>
       <Collapse in={selectedHelpOption === "availability"}>
         {selectedHelpOption === "availability" && (
-          <div className="popupMain">
-            <PopupOption
-              close={handleCloseOption}
-              optionTitle="Availability"
-              optionText="Looks like our next available spot is the next Monday at 8:00 a.m."
-              actionText="Would you like to book a cleaning service?"
-            />
-          </div>
+          <AssistantOption
+            close={handleCloseOption}
+            optionTitle="Availability"
+            optionText="Looks like our next available spot is the next Monday at 8:00 a.m."
+            actionText="Would you like to book a cleaning service?"
+          />
         )}
       </Collapse>
       <span>
