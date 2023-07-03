@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/allset-assistant/static/css/main.5af94030.css",
-    "main.js": "/allset-assistant/static/js/main.ac4278e4.js",
+    "main.css": "/allset-assistant/static/css/main.462f87d3.css",
+    "main.js": "/allset-assistant/static/js/main.a1d94e31.js",
     "static/js/787.760911f0.chunk.js": "/allset-assistant/static/js/787.760911f0.chunk.js",
     "static/media/holding-phone.jpg": "/allset-assistant/static/media/holding-phone.a2c7d22846662ab931a8.jpg",
     "static/media/person-1.jfif": "/allset-assistant/static/media/person-1.bbea6ac7c4645e7ad06b.jfif",
@@ -14,12 +14,12 @@
     "static/media/video.svg": "/allset-assistant/static/media/video.db5c14278bbc8e1b063627f5caa5f965.svg",
     "static/media/close.svg": "/allset-assistant/static/media/close.604f17ae9e7f7ab96de76a3408313180.svg",
     "static/media/menu.svg": "/allset-assistant/static/media/menu.9dbc5a3a96ad85a57422263699b1695d.svg",
-    "main.5af94030.css.map": "/allset-assistant/static/css/main.5af94030.css.map",
-    "main.ac4278e4.js.map": "/allset-assistant/static/js/main.ac4278e4.js.map",
+    "main.462f87d3.css.map": "/allset-assistant/static/css/main.462f87d3.css.map",
+    "main.a1d94e31.js.map": "/allset-assistant/static/js/main.a1d94e31.js.map",
     "787.760911f0.chunk.js.map": "/allset-assistant/static/js/787.760911f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5af94030.css",
-    "static/js/main.ac4278e4.js"
+    "static/css/main.462f87d3.css",
+    "static/js/main.a1d94e31.js"
   ]
 }
