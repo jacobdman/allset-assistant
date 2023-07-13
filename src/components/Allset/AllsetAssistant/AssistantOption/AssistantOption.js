@@ -13,7 +13,6 @@ const AssistantOption = ({ close, optionTitle, optionText, actionText }) => {
 
   return (
     <div className="optionContainer">
-      <div onClick={close}>BACK</div>
       <p className="optionTitle">What can I help with?</p>
       <div className="optionChip">{optionTitle}</div>
 
