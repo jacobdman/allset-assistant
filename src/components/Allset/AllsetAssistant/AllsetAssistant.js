@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./allsetAssistant.css";
 import Collapse from "@mui/material/Collapse";
-import AssistantOption from "./AssistantOption";
+import ScheduleOption from "./AssistantOptions/ScheduleOption";
+import TextOption from "./AssistantOptions/TextOption";
+import TextPage2 from "./AssistantOptions/TextPage2";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonthOutlined";
-import QuestionMarkIcon from "@mui/icons-material/QuestionMarkOutlined";
+// import QuestionMarkIcon from "@mui/icons-material/QuestionMarkOutlined";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswerOutlined";
 import ArticleIcon from "@mui/icons-material/ArticleOutlined";
 import ClearIcon from "@mui/icons-material/ClearOutlined";
@@ -32,46 +34,34 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
         </div>
       </div>
       <div className="assistantContent">
+        <p className="titleText">What can I help with?</p>
         <Collapse in={selectedHelpOption === "main"} className="mainContainer">
-          <p className="titleText">What can I help with?</p>
           <div
             className="botButton"
-            onClick={() => setSelectedHelpOption("availability")}
-          >
-            <CalendarMonthIcon />
-            Book an appointment
-          </div>
-          <div
-            className="botButton"
-            onClick={() => setSelectedHelpOption("quote")}
+            onClick={() => setSelectedHelpOption("estimate")}
           >
             <ArticleIcon />
-            Get a quote
+            Get Instant Estimate
           </div>
           <div
             className="botButton"
-            onClick={() => setSelectedHelpOption("contact-agent")}
+            onClick={() => setSelectedHelpOption("schedule")}
           >
-            <QuestionMarkIcon />
-            Ask a Question
+            <CalendarMonthIcon />
+            Schedule a Service
           </div>
           <div
             className="botButton"
-            onClick={() => setSelectedHelpOption("info")}
+            onClick={() => setSelectedHelpOption("text")}
           >
             <QuestionAnswerIcon />
-            Text me
+            Text us for answers
           </div>
         </Collapse>
-        <Collapse in={selectedHelpOption === "availability"}>
-          {selectedHelpOption === "availability" && (
-            <AssistantOption
-              close={handleCloseOption}
-              optionTitle="Availability"
-              optionText="Looks like our next available spot is the next Monday at 8:00 a.m."
-              actionText="Would you like to book a cleaning service?"
-            />
-          )}
+        <Collapse in={selectedHelpOption !== "main"}>
+          {selectedHelpOption === "schedule" && <ScheduleOption />}
+          {selectedHelpOption === "text" && <TextOption setSelectedHelpOption={setSelectedHelpOption} />}
+          {selectedHelpOption === "textPage2" && <TextPage2 closeAllset={close} setSelectedHelpOption={setSelectedHelpOption} />}
         </Collapse>
         <span>
           powered by <strong>allset</strong>

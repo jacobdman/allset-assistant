@@ -39,3 +39,37 @@
 .spacer {
   width: 1.75rem;
 }
+
+.allsetInput {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.75rem;
+}
+.allsetInput button {
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  width: 33%;
+}
+
+.combinedIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.combinedIcons > * {
+  position: absolute;
+}
+
+.altTitle {
+  color: var(--gray-800, #323232);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
