@@ -166,17 +166,7 @@ const DefaultApp = () => {
             </form>
           </div>
 
-          <div class="contact-left">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31465.03369795242!2d80.01091702588964!3d9.669999413076031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe53fd7be66aa5%3A0xc7da0d9203baf512!2sJaffna!5e0!3m2!1sen!2slk!4v1631203020561!5m2!1sen!2slk"
-              width="600"
-              height="450"
-              // style="border:0"
-              allowfullscreen=""
-              loading="lazy"
-              title="Lazy"
-            ></iframe>
-          </div>
+          <div class="contact-left"></div>
         </div>
       </section>
 
@@ -186,6 +176,6 @@ const DefaultApp = () => {
      </script> */}
     </div>
   );
-}
+};
 
 export default DefaultApp;

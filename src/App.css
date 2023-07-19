@@ -8,13 +8,12 @@ body {
   background: #f5f5f5;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
-.insideFrame {
-  height: 100vh;
+iframe {
   width: 100vw;
-  position: absolute;
-  border: none;
+  height: 100vh;
 }
 
 a {
@@ -206,11 +205,6 @@ input[type="submit"] {
   margin-bottom: 5em;
   padding: 0.8em 2em;
   cursor: pointer;
-}
-
-iframe {
-  width: 100%;
-  height: 300px;
 }
 
 nav.menu-btn {

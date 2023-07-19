@@ -8,7 +8,8 @@ const App = () => {
   const { search } = useLocation();
   const query = new URLSearchParams(search);
   const exampleSiteURL = query.get("url");
-  const spoofedURL = `http://localhost:4000/?url=${encodeURI(exampleSiteURL)}`;
+  // const spoofedURL = `http://localhost:4000/?url=${encodeURI(exampleSiteURL)}`;
+  const spoofedURL = `${exampleSiteURL}?igu=1`;
   return (
     <div className="App">
       <Allset />
