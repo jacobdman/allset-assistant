@@ -58,7 +58,7 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
           </div>
         </Collapse>
         <Collapse in={selectedHelpOption !== "main"}>
-          {selectedHelpOption === "schedule" && <ScheduleOption />}
+          {selectedHelpOption === "schedule" && <ScheduleOption setSelectedHelpOption={setSelectedHelpOption} />}
           {selectedHelpOption === "text" && <TextOption setSelectedHelpOption={setSelectedHelpOption} />}
           {selectedHelpOption === "textPage2" && <TextPage2 closeAllset={close} setSelectedHelpOption={setSelectedHelpOption} />}
         </Collapse>

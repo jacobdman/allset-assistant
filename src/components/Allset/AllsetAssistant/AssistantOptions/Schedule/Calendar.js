@@ -1,41 +1,71 @@
-import React, { useState } from "react";
+import React from "react";
 import "../assistantOptions.css";
 import dayjs from "dayjs";
-import CheckIcon from "@mui/icons-material/Check";
-import Typewriter from "typewriter-effect";
 import Grow from "@mui/material/Grow";
-import LinearProgress from "@mui/material/LinearProgress";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonthOutlined";
 import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
 
-const SoonestAvailability = () => {
+const Calendar = ({
+  openConfirmationPage,
+  selectedServiceDate,
+  setSelectedServiceDate,
+}) => {
+  console.log(selectedServiceDate);
   return (
     <>
       <div className="optionChip">Schedule a Service</div>
-      <StaticDatePicker
-        className="calendar"
-        disablePast
-        defaultValue={dayjs().add(1, "day")}
-        slotProps={{
-          actionBar: { actions: [] },
-          toolbar: {
-            hidden: true,
-          },
-        }}
-      />
+      <Grow in timeout={1000}>
+        <div>
+          <StaticDatePicker
+            className="calendar"
+            disablePast
+            defaultValue={dayjs().add(1, "day")}
+            slotProps={{
+              actionBar: { actions: [] },
+              toolbar: {
+                hidden: true,
+              },
+            }}
+            onChange={value => setSelectedServiceDate(value)}
+          />
+        </div>
+      </Grow>
       <div className="calendarButtonContainer">
-        <Grow in timeout={2000}>
-          <button className="botButton">Yes</button>
+        <Grow in timeout={1250}>
+          <button
+            className="botButton"
+            onClick={() => {
+              setSelectedServiceDate(prev => prev.hour(12));
+              openConfirmationPage();
+            }}
+          >
+            Yes
+          </button>
         </Grow>
-        <Grow in timeout={2500}>
-          <button className="botButton">12:00 p.m.</button>
+        <Grow in timeout={1500}>
+          <button
+            className="botButton"
+            onClick={() => {
+              setSelectedServiceDate(prev => prev.hour(12));
+              openConfirmationPage();
+            }}
+          >
+            12:00 p.m.
+          </button>
         </Grow>
-        <Grow in timeout={2500}>
-          <button className="botButton">4:00 p.m.</button>
+        <Grow in timeout={1750}>
+          <button
+            className="botButton"
+            onClick={() => {
+              setSelectedServiceDate(prev => prev.hour(16));
+              openConfirmationPage();
+            }}
+          >
+            4:00 p.m.
+          </button>
         </Grow>
       </div>
     </>
   );
 };
 
-export default SoonestAvailability;
+export default Calendar;

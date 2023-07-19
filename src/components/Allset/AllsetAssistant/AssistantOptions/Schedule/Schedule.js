@@ -2,21 +2,27 @@ import React, { useState } from "react";
 import "../assistantOptions.css";
 import "./Schedule.css";
 import Grow from "@mui/material/Grow";
-import LinearProgress from "@mui/material/LinearProgress";
+import dayjs from "dayjs";
 import SoonestAvailability from "./SoonestAvailability";
 import Calendar from "./Calendar";
+import AppointmentConfirmation from './AppointmentConfirmation';
 
-const pageOptions = [SoonestAvailability, Calendar];
+const pageOptions = [SoonestAvailability, Calendar, AppointmentConfirmation];
 
-const Schedule = () => {
+const Schedule = ({ setSelectedHelpOption }) => {
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const [selectedServiceDate, setSelectedServiceDate] = useState(dayjs().add(1, "day").hour(8).minute(0).second(0).millisecond(0));
 
-  const nextPage = () => {
-    setCurrentPageIndex(currentPageIndex + 1);
+  const openConfirmationPage = () => {
+    setCurrentPageIndex(2);
   };
 
-  const previousPage = () => {
-    setCurrentPageIndex(currentPageIndex - 1);
+  const openCalendarPage = () => {
+    setCurrentPageIndex(1);
+  };
+
+  const handleConfirmAppointment = () => {
+    setSelectedHelpOption('textPage2')
   };
 
   return (
@@ -29,7 +35,13 @@ const Schedule = () => {
             transitionDuration={2000}
           >
             <div className="optionContainer">
-              <PageComponent nextPage={nextPage} previousPage={previousPage} />
+              <PageComponent
+                openCalendarPage={openCalendarPage}
+                openConfirmationPage={openConfirmationPage}
+                selectedServiceDate={selectedServiceDate}
+                setSelectedServiceDate={setSelectedServiceDate}
+                handleConfirmAppointment={handleConfirmAppointment}
+              />
             </div>
           </Grow>
         ) : (

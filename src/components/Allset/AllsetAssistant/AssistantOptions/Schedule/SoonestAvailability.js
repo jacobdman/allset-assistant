@@ -6,7 +6,7 @@ import Grow from "@mui/material/Grow";
 import LinearProgress from "@mui/material/LinearProgress";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonthOutlined";
 
-const SoonestAvailability = ({ nextPage }) => {
+const SoonestAvailability = ({ openCalendarPage, openConfirmationPage }) => {
   const [loadingResponse, setLoadingResponse] = useState(true);
   const [responseGenerationCompleted, setResponseGenerationCompleted] =
     useState(false);
@@ -43,14 +43,14 @@ const SoonestAvailability = ({ nextPage }) => {
       />
       <div className="actionButtonContainer">
         <Grow in={responseGenerationCompleted} timeout={2000}>
-          <button className="botButton">
+          <button className="botButton" onClick={openConfirmationPage}>
             <CheckIcon />
             Yes
           </button>
         </Grow>
         <div className="spacer" />
         <Grow in={responseGenerationCompleted} timeout={2500}>
-          <button className="botButton" onClick={nextPage}>
+          <button className="botButton" onClick={openCalendarPage}>
             <CalendarMonthIcon />
             More
           </button>

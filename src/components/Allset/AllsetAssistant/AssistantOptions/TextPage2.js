@@ -17,8 +17,6 @@ const TextOption = ({ setSelectedHelpOption, closeAllset }) => {
 
   return (
     <div className="optionContainer">
-      <div className="optionChip">Text us for answers</div>
-
       <Grow in={loadingResponse} timeout={500} transitionDuration={2000}>
         <div className="progress">
           <LinearProgress />
