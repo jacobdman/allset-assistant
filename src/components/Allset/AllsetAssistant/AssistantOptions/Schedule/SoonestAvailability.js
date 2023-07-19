@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./assistantOptions.css";
+import "../assistantOptions.css";
 import CheckIcon from "@mui/icons-material/Check";
-import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import Typewriter from "typewriter-effect";
 import Grow from "@mui/material/Grow";
 import LinearProgress from "@mui/material/LinearProgress";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonthOutlined";
 
-const ScheduleOption = () => {
+const SoonestAvailability = ({ nextPage }) => {
   const [loadingResponse, setLoadingResponse] = useState(true);
   const [responseGenerationCompleted, setResponseGenerationCompleted] =
     useState(false);
@@ -16,7 +16,7 @@ const ScheduleOption = () => {
   const actionText = "Would you like to book a cleaning service?";
 
   return (
-    <div className="optionContainer">
+    <>
       <div className="optionChip">Schedule a Service</div>
 
       <Grow in={loadingResponse} timeout={500} transitionDuration={2000}>
@@ -50,14 +50,14 @@ const ScheduleOption = () => {
         </Grow>
         <div className="spacer" />
         <Grow in={responseGenerationCompleted} timeout={2500}>
-          <button className="botButton">
-            <QuestionMarkIcon />
-            Not yet
+          <button className="botButton" onClick={nextPage}>
+            <CalendarMonthIcon />
+            More
           </button>
         </Grow>
       </div>
-    </div>
+    </>
   );
 };
 
-export default ScheduleOption;
+export default SoonestAvailability;

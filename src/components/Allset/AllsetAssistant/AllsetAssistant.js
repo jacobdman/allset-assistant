@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./allsetAssistant.css";
 import Collapse from "@mui/material/Collapse";
-import ScheduleOption from "./AssistantOptions/ScheduleOption";
+import ScheduleOption from "./AssistantOptions/Schedule";
 import TextOption from "./AssistantOptions/TextOption";
 import TextPage2 from "./AssistantOptions/TextPage2";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonthOutlined";
-// import QuestionMarkIcon from "@mui/icons-material/QuestionMarkOutlined";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswerOutlined";
 import ArticleIcon from "@mui/icons-material/ArticleOutlined";
 import ClearIcon from "@mui/icons-material/ClearOutlined";
@@ -55,7 +54,7 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
             onClick={() => setSelectedHelpOption("text")}
           >
             <QuestionAnswerIcon />
-            Text us for answers
+            Text us
           </div>
         </Collapse>
         <Collapse in={selectedHelpOption !== "main"}>

@@ -35,7 +35,7 @@ const TextOption = ({ setSelectedHelpOption, closeAllset }) => {
         }}
         onInit={typewriter => {
           typewriter
-            .pauseFor(7000) // change to 7000
+            .pauseFor(5000)
             .callFunction(() => setLoadingResponse(false))
             .callFunction(() => setResponseSet1Completed(true))
             .typeString(`<p>${optionText}</p>`)

@@ -1,0 +1,13 @@
+.calendar {
+  border-radius: 0.625rem;
+  border: 1px solid #cacac8;
+  background: rgba(252, 252, 250, 0.95);
+  box-shadow: 0px 12.015332221984863px 10px 0px rgba(29, 22, 22, 0.04);
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.calendarButtonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
