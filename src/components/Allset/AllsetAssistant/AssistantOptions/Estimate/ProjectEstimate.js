@@ -12,7 +12,7 @@ const ProjectEstimate = ({ openCalendarPage, openConfirmationPage }) => {
     useState(false);
 
   const optionText = `<h2 class="estimate-price">$480.00</h2>`;
-  const additionalOptionText = `<a class="estimate-details">What's included?</a>`;
+  const additionalOptionText = `<a href="https://tryallset.com" class="estimate-details">What's included?</a>`;
   const actionText = "Do you want to book now?";
 
   return (
@@ -34,7 +34,7 @@ const ProjectEstimate = ({ openCalendarPage, openConfirmationPage }) => {
         }}
         onInit={typewriter => {
           typewriter
-            .pauseFor(1000) // change to 4000
+            .pauseFor(4000)
             .callFunction(() => setLoadingResponse(false))
             .typeString(`${optionText}`)
             .pauseFor(500)
