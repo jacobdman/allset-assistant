@@ -18,11 +18,13 @@ const TextOption = ({ setSelectedHelpOption }) => {
     <div className="optionContainer">
       <div className="optionChip">Text us for answers</div>
 
-      <Grow in={loadingResponse} timeout={500} transitionDuration={2000}>
-        <div className="progress">
-          <LinearProgress />
-        </div>
-      </Grow>
+      {loadingResponse && (
+        <Grow in={loadingResponse} timeout={500} transitionDuration={2000}>
+          <div className="progress">
+            <LinearProgress />
+          </div>
+        </Grow>
+      )}
 
       <Typewriter
         options={{
@@ -55,7 +57,9 @@ const TextOption = ({ setSelectedHelpOption }) => {
               placeholder="+1 (234) 567-8900"
               variant="outlined"
             />
-            <button onClick={() => setSelectedHelpOption('textPage2')}>Send</button>
+            <button onClick={() => setSelectedHelpOption("textPage2")}>
+              Send
+            </button>
           </div>
         </Grow>
       </div>

@@ -11,19 +11,20 @@ const SoonestAvailability = ({ openCalendarPage, openConfirmationPage }) => {
   const [responseGenerationCompleted, setResponseGenerationCompleted] =
     useState(false);
 
-  const optionText =
-    `Looks like our next available spot is the next <strong>Monday at 8:00 a.m.<strong>`;
+  const optionText = `Looks like our next available spot is the next <strong>Monday at 8:00 a.m.<strong>`;
   const actionText = "Would you like to book a cleaning service?";
 
   return (
     <>
       <div className="optionChip">Schedule a Service</div>
 
-      <Grow in={loadingResponse} timeout={500} transitionDuration={2000}>
-        <div className="progress">
-          <LinearProgress />
-        </div>
-      </Grow>
+      {loadingResponse && (
+        <Grow in={loadingResponse} timeout={500} transitionDuration={2000}>
+          <div className="progress">
+            <LinearProgress />
+          </div>
+        </Grow>
+      )}
 
       <Typewriter
         options={{

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./allsetAssistant.css";
 import Collapse from "@mui/material/Collapse";
+import EstimateOption from './AssistantOptions/Estimate';
 import ScheduleOption from "./AssistantOptions/Schedule";
 import TextOption from "./AssistantOptions/TextOption";
 import TextPage2 from "./AssistantOptions/TextPage2";
@@ -58,6 +59,7 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
           </div>
         </Collapse>
         <Collapse in={selectedHelpOption !== "main"}>
+          {selectedHelpOption === "estimate" && <EstimateOption setSelectedHelpOption={setSelectedHelpOption} />}
           {selectedHelpOption === "schedule" && <ScheduleOption setSelectedHelpOption={setSelectedHelpOption} />}
           {selectedHelpOption === "text" && <TextOption setSelectedHelpOption={setSelectedHelpOption} />}
           {selectedHelpOption === "textPage2" && <TextPage2 closeAllset={close} setSelectedHelpOption={setSelectedHelpOption} />}

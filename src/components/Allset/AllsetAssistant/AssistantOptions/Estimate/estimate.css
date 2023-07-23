@@ -1,0 +1,11 @@
+.estimateContainer {
+  padding: 0.5rem;
+}
+
+.estimate-price {
+  margin-bottom: 5px;
+}
+.estimate-details {
+  color: #828281;
+  margin-bottom: 2rem;
+}

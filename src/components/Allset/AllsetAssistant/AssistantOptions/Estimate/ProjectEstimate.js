@@ -1,22 +1,23 @@
 import React, { useState } from "react";
-import "./assistantOptions.css";
+import "../assistantOptions.css";
+import CheckIcon from "@mui/icons-material/Check";
 import Typewriter from "typewriter-effect";
 import Grow from "@mui/material/Grow";
-import MarkChatReadOutlinedIcon from "@mui/icons-material/MarkChatReadOutlined";
-import CheckIcon from "@mui/icons-material/Check";
-import ClearIcon from "@mui/icons-material/Clear";
 import LinearProgress from "@mui/material/LinearProgress";
+import ClearIcon from "@mui/icons-material/Clear";
 
-const TextOption = ({ setSelectedHelpOption, closeAllset }) => {
+const ProjectEstimate = ({ openCalendarPage, openConfirmationPage }) => {
   const [loadingResponse, setLoadingResponse] = useState(true);
-  const [responseSet1Completed, setResponseSet1Completed] = useState(false);
   const [responseGenerationCompleted, setResponseGenerationCompleted] =
     useState(false);
 
-  const optionText = `Message sent!`;
+  const optionText = `<h2 class="estimate-price">$480.00</h2>`;
+  const additionalOptionText = `<a class="estimate-details">What's included?</a>`;
+  const actionText = "Do you want to book now?";
 
   return (
-    <div className="optionContainer">
+    <>
+      <div className="optionChip">Instant Estimate</div>
 
       {loadingResponse && (
         <Grow in={loadingResponse} timeout={500} transitionDuration={2000}>
@@ -26,10 +27,6 @@ const TextOption = ({ setSelectedHelpOption, closeAllset }) => {
         </Grow>
       )}
 
-      <Grow in={responseSet1Completed} timeout={500}>
-        <MarkChatReadOutlinedIcon fontSize="large" />
-      </Grow>
-
       <Typewriter
         options={{
           delay: 30,
@@ -37,36 +34,37 @@ const TextOption = ({ setSelectedHelpOption, closeAllset }) => {
         }}
         onInit={typewriter => {
           typewriter
-            .pauseFor(5000)
+            .pauseFor(1000) // change to 4000
             .callFunction(() => setLoadingResponse(false))
-            .callFunction(() => setResponseSet1Completed(true))
-            .typeString(`<p>${optionText}</p>`)
-            .pauseFor(2500)
-            .typeString(`<p class="altTitle">Can I help anywhere else?</p>`)
+            .typeString(`${optionText}`)
+            .pauseFor(500)
+            .typeString(`${additionalOptionText}`)
+            .pauseFor(500)
+            .typeString(`<h3>${actionText}</h3>`)
             .callFunction(() => setResponseGenerationCompleted(true))
             .start();
         }}
       />
-      <div className="actionButtonContainer">
+      <div
+        className="actionButtonContainer"
+        style={{ flexDirection: "column" }}
+      >
         <Grow in={responseGenerationCompleted} timeout={2000}>
-          <button
-            className="botButton"
-            onClick={() => setSelectedHelpOption("main")}
-          >
+          <button className="botButton" onClick={openConfirmationPage}>
             <CheckIcon />
-            Yes
+            Yes! I want to book now.
           </button>
         </Grow>
         <div className="spacer" />
         <Grow in={responseGenerationCompleted} timeout={2500}>
-          <button className="botButton" onClick={closeAllset}>
+          <button className="botButton" onClick={openCalendarPage}>
             <ClearIcon />
-            I'm done
+            Not yet
           </button>
         </Grow>
       </div>
-    </div>
+    </>
   );
 };
 
-export default TextOption;
+export default ProjectEstimate;
