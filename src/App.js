@@ -9,9 +9,12 @@ const App = () => {
   const query = new URLSearchParams(search);
   const exampleSiteURL = query.get("url");
   const spoofedURL = `${exampleSiteURL}?igu=1`;
+
+  const useProductionSidekick = query.get("productionSidekick");
+
   return (
     <div className="App">
-      <Allset />
+      {!useProductionSidekick && <Allset />}
       {exampleSiteURL ? (
         <iframe src={spoofedURL} title="Allset Example"></iframe>
       ) : (
