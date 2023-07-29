@@ -5,6 +5,7 @@ import AllsetAssistant from "../AllsetAssistant";
 import WavingHandIcon from "@mui/icons-material/WavingHandOutlined";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import AllsetLogo from "../AllsetLogo";
 
 const AllsetPopup = () => {
   const [isAssistantOpen, setIsAssistantOpen] = useState(false);
@@ -39,9 +40,10 @@ const AllsetPopup = () => {
             <WavingHandIcon className="mirror" />
             <p className="popupTitle">Hi! Can We Help?</p>
           </div>
-          <p className="popupSubtitle">
-            powered by <strong>allset.</strong>
-          </p>
+          <div className="powered-by-allset popupSubtitle">
+            <span>powered by</span>
+            <AllsetLogo sx={{ width: 40, paddingLeft: "3px" }} />
+          </div>
         </div>
         {isAssistantOpen && (
           <AllsetAssistant ref={assistantRef} close={handleCloseAssistant} />

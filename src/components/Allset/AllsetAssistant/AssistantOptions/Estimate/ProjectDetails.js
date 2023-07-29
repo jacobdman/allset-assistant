@@ -31,19 +31,19 @@ const ProjectDetails = ({
         spacing={2}
         alignItems="center"
       >
-        <Grid item xs={1.5}>
+        <Grid item xs={1.8}>
           Size
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={5.8}>
           <Slider
             min={1200}
-            max={5000}
+            max={10000}
             value={size}
             onChange={(e, newValue) => setSize(newValue)}
           />
         </Grid>
-        <Grid item xs={2.5}>
-          {size} ft
+        <Grid item xs={4.4}>
+          {size} Sq. ft
         </Grid>
         <Grid item xs={12}>
           <FormControl fullWidth>

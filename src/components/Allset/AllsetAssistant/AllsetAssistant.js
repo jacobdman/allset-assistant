@@ -10,6 +10,7 @@ import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswerOutlined";
 import ArticleIcon from "@mui/icons-material/ArticleOutlined";
 import ClearIcon from "@mui/icons-material/ClearOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBackOutlined";
+import AllsetLogo from "../AllsetLogo";
 
 const PopupChat = React.forwardRef(({ close }, ref) => {
   const [selectedHelpOption, setSelectedHelpOption] = useState("main");
@@ -34,7 +35,7 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
         </div>
       </div>
       <div className="assistantContent">
-        {selectedHelpOption !== "main" && (
+        {selectedHelpOption === "main" && (
           <p className="titleText">What can I help with?</p>
         )}
         <Collapse in={selectedHelpOption === "main"} className="mainContainer">
@@ -77,9 +78,10 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
             />
           )}
         </Collapse>
-        <span>
-          powered by <strong>allset</strong>
-        </span>
+      </div>
+      <div className="powered-by-allset">
+        <span>powered by</span>
+        <AllsetLogo sx={{ width: 50, paddingLeft: "3px" }} />
       </div>
     </div>
   );

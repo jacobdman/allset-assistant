@@ -18,20 +18,27 @@
     <script>
       // BELOW CODE IS FOR DEMO PURPOSES ONLY
       const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get("productionSidekick") === "true") {
-        // BEGIN PRODUCTION EMBEDDING SNIPPET
-        (function (apiKey) {
-          const script = document.createElement("script");
-          script.type = "text/javascript";
-          script.async = true;
-          script.id = "__sidekick_embed_script__"
-          script.src =
-            "https://sidekick-8df83.web.app/sidekick.js?apiKey=" + apiKey;
-          const firstScript = document.getElementsByTagName("script")[0];
-          firstScript.parentNode.insertBefore(script, firstScript);
-        })("YOUR-API-KEY-HERE");
-      }
+      // if (urlParams.get("productionSidekick") === "true") {
+      //   // BEGIN PRODUCTION EMBEDDING SNIPPET
+      //   (function (apiKey) {
+      //     const script = document.createElement("script");
+      //     script.type = "text/javascript";
+      //     script.async = true;
+      //     script.id = "__sidekick_embed_script__"
+          
+      //     // BELOW CODE IS FOR DEMO PURPOSES ONLY
+      //     if (window.location.hostname.startsWith('localhost')) {
+      //       script.src = "http://localhost:3001/sidekick.js?apiKey=" + apiKey;
+      //     } else {
+      //       script.src = "https://sidekick-8df83.web.app/sidekick.js?apiKey=" + apiKey;
+      //     }
+    
+      //     const firstScript = document.getElementsByTagName("script")[0];
+      //     firstScript.parentNode.insertBefore(script, firstScript);
+      //   })("YOUR-API-KEY-HERE");
+      // }
     </script>
+    
 
     <!--
       manifest.json provides metadata used when your web app is installed on a

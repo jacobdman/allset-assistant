@@ -12,10 +12,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 25rem;
+  width: 400px;
   box-sizing: border-box;
   /* padding:  */
-  padding: 0.75rem 1.5rem 2.5rem 1.5rem;
+  padding: 12px 50px 40px 50px;
   border-radius: 1.92238rem 0rem 0rem 1.92238rem;
   background: rgba(255, 255, 249, 0.95);
   box-shadow: -4px 5px 0px 0px #434343;
@@ -25,10 +25,13 @@
 
 .assistantContent {
   /* padding: 0.75rem 3.75rem 2.5rem 3.75rem; */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .titleText {
