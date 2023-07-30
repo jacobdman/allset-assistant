@@ -26,26 +26,26 @@ const DefaultApp = () => {
   return (
     <div className="App">
       {/* <!--NAVIGATION BLOG START--> */}
-      <div class="nav-bar">
-        <div class="container">
-          <a class="logo-nav" href="">
+      <div className="nav-bar">
+        <div className="container">
+          <a className="logo-nav" href="">
             Remember<span>That</span>
           </a>
           <img
             id="mobile-cta"
-            class="mobile-menu"
+            className="mobile-menu"
             src={menu}
             alt="navigation"
           />
           <nav>
             <img
               id="mobile-exit"
-              class="mobile-menu-exit"
+              className="mobile-menu-exit"
               src={close}
               alt="close navigation"
             />
-            <ul class="primary-nav">
-              <li class="current">
+            <ul className="primary-nav">
+              <li className="current">
                 <a href="#">Home</a>
               </li>
               <li>
@@ -56,11 +56,11 @@ const DefaultApp = () => {
               </li>
             </ul>
 
-            <ul class="second-nav">
+            <ul className="second-nav">
               <li>
                 <a href="#">Contact</a>
               </li>
-              <li class="go-premium-cta">
+              <li className="go-premium-cta">
                 <a href="#">Go Premium</a>
               </li>
             </ul>
@@ -70,31 +70,31 @@ const DefaultApp = () => {
       {/* <!--NAVIGATION BLOG END--> */}
 
       {/* <!--SECTION HERO BLOG START--> */}
-      <section class="hero">
-        <div class="container">
-          <div class="left-col">
-            <p class="sub-head">it's nitty &amp; gritty</p>
+      <section className="hero">
+        <div className="container">
+          <div className="left-col">
+            <p className="sub-head">it's nitty &amp; gritty</p>
             <h1>a task app that doesn't stink</h1>
 
-            <div class="hero-cta">
-              <a href="#" class="primery-cta">
+            <div className="hero-cta">
+              <a href="#" className="primery-cta">
                 Try for free
               </a>
-              <a href="#" class="watch-video-cta">
+              <a href="#" className="watch-video-cta">
                 <img src={video} alt="Video Clip" />
                 Watch a video
               </a>
             </div>
           </div>
 
-          <img src={illustration} alt="Illustration" class="hero-img" />
+          <img src={illustration} alt="Illustration" className="hero-img" />
         </div>
       </section>
       {/* <!--SECTION HERO BLOG END--> */}
 
       {/* <!--SECTION FEATURES BLOG START--> */}
-      <section class="features-section">
-        <div class="container">
+      <section className="features-section">
+        <div className="container">
           <ul>
             <li>unlimited tasks</li>
             <li>confetti Explosions upon task completions</li>
@@ -109,8 +109,8 @@ const DefaultApp = () => {
       {/* <!--SECTION FEATURES BLOG END--> */}
 
       {/* <!--SECTION TEST  BLOG START--> */}
-      <section class="test-monials-section">
-        <div class="container">
+      <section className="test-monials-section">
+        <div className="container">
           <ul>
             {/* <!--PERSON 1--> */}
             <li>
@@ -147,14 +147,14 @@ const DefaultApp = () => {
       {/* <!--SECTION TEST  BLOG END--> */}
 
       {/* <!--SECTION CONTACT  BLOG START--> */}
-      <section class="contact-section">
-        <div class="container">
-          <div class="contact-left">
+      <section className="contact-section">
+        <div className="container">
+          <div className="contact-left">
             <h2>Contact</h2>
             <form action="#" method="post">
-              <label for="name">Name</label>
+              <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" />
-              <label for="message">Message</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 name="message"
                 id="message"
@@ -162,11 +162,11 @@ const DefaultApp = () => {
                 rows="10"
               ></textarea>
 
-              <input type="submit" value="send message" class="send-message" />
+              <input type="submit" value="send message" className="send-message" />
             </form>
           </div>
 
-          <div class="contact-left"></div>
+          <div className="contact-left"></div>
         </div>
       </section>
 
