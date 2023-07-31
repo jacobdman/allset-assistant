@@ -15,42 +15,14 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
     />
 
+    <!-- Prod script -->
+    <!-- <script>
+      !function(){var n=window.__sidekick=window.__sidekick||[];var i=function(a){var t=document.createElement("div");t.id="__sidekick_root__";document.body.appendChild(t)};var e=new URLSearchParams(window.location.search);n.push(i);!function(a){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.id="__sidekick_embed_script__";t.src="https://sidekick-8df83.web.app/sidekick.js?apiKey="+a;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)("YOUR-API-KEY-HERE")}}();
+    </script> -->
+
+    <!-- Demo script -->
     <script>
-      window.__sidekick = window.__sidekick || [];
-
-      // The function to initialize Sidekick
-      var initSidekick = function (apiKey) {
-        var sidekickRoot = document.createElement("div");
-        sidekickRoot.id = "__sidekick_root__";
-        document.body.appendChild(sidekickRoot);
-      };
-
-      // ***** THIS CODE IS FOR DEMO PURPOSES ONLY ***** //
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get("productionSidekick") === "true") {
-        // ********** //
-        // Add the initializer function to the queue
-        window.__sidekick.push(initSidekick);
-
-        (function (apiKey) {
-          const script = document.createElement("script");
-          script.type = "text/javascript";
-          script.async = true;
-          script.id = "__sidekick_embed_script__";
-
-          // ***** THIS CODE IS FOR DEMO PURPOSES ONLY ***** //
-          if (window.location.hostname.startsWith("localhost")) {
-            script.src = "http://localhost:3001/sidekick.js?apiKey=" + apiKey;
-          } else {
-            // ********** //
-            script.src =
-              "https://sidekick-8df83.web.app/sidekick.js?apiKey=" + apiKey;
-          }
-
-          const firstScript = document.getElementsByTagName("script")[0];
-          firstScript.parentNode.insertBefore(script, firstScript);
-        })("YOUR-API-KEY-HERE");
-      }
+      !function(){var n=window.__sidekick=window.__sidekick||[];var i=function(a){var t=document.createElement("div");t.id="__sidekick_root__";document.body.appendChild(t)};var e=new URLSearchParams(window.location.search);if("true"===e.get("productionSidekick")){n.push(i);!function(a){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.id="__sidekick_embed_script__";t.src=window.location.hostname.startsWith("localhost")?"http://localhost:3001/sidekick.js?apiKey="+a:"https://sidekick-8df83.web.app/sidekick.js?apiKey="+a;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}("YOUR-API-KEY-HERE")}}();
     </script>
 
     <!--
