@@ -17,13 +17,36 @@
 
     <!-- Prod script -->
     <!-- <script>
-      !function(){var n=window.__sidekick=window.__sidekick||[];var i=function(a){var t=document.createElement("div");t.id="__sidekick_root__";document.body.appendChild(t)};var e=new URLSearchParams(window.location.search);n.push(i);!function(a){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.id="__sidekick_embed_script__";t.src="https://sidekick-8df83.web.app/sidekick.js?apiKey="+a;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)("YOUR-API-KEY-HERE")}}();
-    </script> -->
+      !function(){var w=window,d=document,s="script",k="__sidekick",e=k+"_root__",t=k+"_embed_"+s,n=w[k]=w[k]||[];n.push(function(){var a=d.createElement("div");a.id=e,d.body.appendChild(a)});!function(a){var i=d.createElement(s);i.type="text/javascript",i.async=!0,i.id=t,i.src="https://sidekick-8df83.web.app/sidekick.js?apiKey="+a;var r=d.getElementsByTagName(s)[0];r.parentNode.insertBefore(i,r)}
+      ("YOUR_API_KEY_HERE")}();
+    </script>       -->
 
     <!-- Demo script -->
     <script>
-      var search=new URLSearchParams(window.location.search)
-      !function(){var n=window.__sidekick=window.__sidekick||[];var i=function(a){var t=document.createElement("div");t.id="__sidekick_root__";document.body.appendChild(t)};var e=new URLSearchParams(window.location.search);if("true"===e.get("productionSidekick")){n.push(i);!function(a){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.id="__sidekick_embed_script__";t.src=window.location.hostname.startsWith("localhost")?"http://localhost:3001/sidekick.js?apiKey="+a:"https://sidekick-8df83.web.app/sidekick.js?apiKey="+a;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(search.get('apiKey') ?? "5cec4576-24f0-4a0d-b248-d342e816ee02")}}();
+      var search = new URLSearchParams(window.location.search);
+      !(function () {
+        var n = (window.__sidekick = window.__sidekick || []);
+        var i = function (a) {
+          var t = document.createElement("div");
+          t.id = "__sidekick_root__";
+          document.body.appendChild(t);
+        };
+        var e = new URLSearchParams(window.location.search);
+        if ("true" === e.get("productionSidekick")) {
+          n.push(i);
+          !(function (a) {
+            var t = document.createElement("script");
+            (t.type = "text/javascript"),
+              (t.async = !0),
+              (t.id = "__sidekick_embed_script__");
+            t.src = window.location.hostname.startsWith("localhost")
+              ? "http://localhost:3001/sidekick.js?apiKey=" + a
+              : "https://sidekick-8df83.web.app/sidekick.js?apiKey=" + a;
+            var e = document.getElementsByTagName("script")[0];
+            e.parentNode.insertBefore(t, e);
+          })(search.get("apiKey") ?? "5cec4576-24f0-4a0d-b248-d342e816ee02");
+        }
+      })();
     </script>
 
     <!--
