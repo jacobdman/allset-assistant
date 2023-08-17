@@ -38,7 +38,7 @@ const AllsetPopup = () => {
         >
           <div className="popupTitleContainer">
             <WavingHandIcon className="mirror" />
-            <p className="popupTitle">Hi! Can We Help?</p>
+            <p className="popupTitle">Hi! Ready to book?</p>
           </div>
           <div className="powered-by-allset popupSubtitle">
             <span>powered by</span>

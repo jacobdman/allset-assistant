@@ -36,7 +36,7 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
       </div>
       <div className="assistantContent">
         {selectedHelpOption === "main" && (
-          <p className="titleText">What can I help with?</p>
+          <p className="titleText">What can we help with?</p>
         )}
         <Collapse in={selectedHelpOption === "main"} className="mainContainer">
           <div
@@ -44,21 +44,21 @@ const PopupChat = React.forwardRef(({ close }, ref) => {
             onClick={() => setSelectedHelpOption("estimate")}
           >
             <ArticleIcon />
-            Get Instant Estimate
+            Instant Estimate
           </div>
           <div
             className="botButton"
             onClick={() => setSelectedHelpOption("schedule")}
           >
             <CalendarMonthIcon />
-            Schedule a Service
+            Instant Book
           </div>
           <div
             className="botButton"
             onClick={() => setSelectedHelpOption("text")}
           >
             <QuestionAnswerIcon />
-            Text us
+            Text Me
           </div>
         </Collapse>
         <Collapse in={selectedHelpOption !== "main"}>
